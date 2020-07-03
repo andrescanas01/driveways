@@ -6,7 +6,7 @@ Driveways
 
 ## Installation from PyPI: 
 - pip install driveways-project-cis4930-v6==0.0.8
-- runserver
+- runmyserver
 
 
 

@@ -8,7 +8,10 @@ Driveways
 - pip install driveways-project-cis4930-v6==0.0.8
 - runmyserver
 
-
+***GDAL libraries must be installed on device
+$ sudo aptitude install gdal-bin libgdal-dev
+$ sudo aptitude install python3-gdal
+$ sudo aptitude install binutils libproj-dev
 
 # Resources
 

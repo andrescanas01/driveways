@@ -23,10 +23,15 @@ def words_to_point(q):
     return point
 
 
+
 def index(request):
 
     return render(request, 'userface/index.html')
 
+
+def portal(request):
+
+    return render(request, 'userface/adminportal.html')
 
 def search(request):
 
@@ -43,6 +48,12 @@ def search(request):
             request.session['spot'] = []
             return render(request, 'userface/search.html', {'resultss': resultss})
 
+        spot_distance = request.GET.get('distance', False )
+        try:
+            val = int(spot_distance)
+        except ValueError:
+            print("That's not an int!")
+            spot_distance = 3
         request.session['spot'] = "unknown"
         if request.user.is_authenticated:
             c_user = request.user
@@ -51,7 +62,7 @@ def search(request):
             dest.save()
             request.session['spot'] = []
             near_spots = ParkingSpot.objects.filter(
-                location__distance_lt=(destination, Distance(km=2)))
+                location__distance_lt=(destination, Distance(km=spot_distance)))
             for spot in near_spots:
                 if len(spot.address) > 0:
                     try :
@@ -92,6 +103,13 @@ class VehicleListView(LoginRequiredMixin, generic.ListView):
     def get_queryset(self):
         return Vehicle.objects.filter(user=self.request.user)[:5]
 
+class ParkingSpotListView(LoginRequiredMixin, generic.ListView):
+    model = ParkingSpot
+    #context_object_name = 'vehicles'
+    template_name = 'userface/parking_spot_list.html'
+
+    def get_queryset(self):
+        return ParkingSpot.objects.filter(owner=self.request.user)[:]
 
 def registervehicle(request):
     if request.method == 'POST':
@@ -102,7 +120,7 @@ def registervehicle(request):
             vehicle.model = form.cleaned_data.get('model')
             vehicle.user = request.user
             vehicle.save()
-        return redirect("/userface")
+        return redirect("/userface/myvehicles")
     else:
         form = VehicleForm()
 
@@ -121,7 +139,7 @@ def addspot(request):
             parkingspot.location = words_to_point(fullAddress)
             parkingspot.owner = request.user
             parkingspot.save()
-        return redirect("/userface")
+        return redirect("/userface/myparking")
     else:
         form = ParkingSpaceForm()
 

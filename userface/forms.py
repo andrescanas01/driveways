@@ -20,6 +20,7 @@ class RegisterForm(UserCreationForm):
 class VehicleForm(forms.ModelForm):
     make = forms.CharField(label="Make", required=True)
     model = forms.CharField(label="Model", required=True)
+    plateNum = forms.CharField(label="License Plate", required=True)
     #color = forms.CharField(label="Color", required=True)
 
     helper = FormHelper()
@@ -29,7 +30,7 @@ class VehicleForm(forms.ModelForm):
 
     class Meta:
         model = Vehicle
-        fields = ["make", "model"]
+        fields = ["make", "model", "plateNum"]
 
 class ParkingSpaceForm(forms.ModelForm):
     address = forms.CharField(label="Address", required=True)

@@ -9,6 +9,7 @@ class Vehicle(models.Model):
     user = models.ForeignKey(User,on_delete = models.CASCADE)
     make = models.CharField(max_length=50)
     model = models.CharField(max_length=50)
+    plateNum = models.CharField(max_length=6, default=' ')
 
     def __str__(self):
         return self.make + " " + self.model

@@ -100,6 +100,7 @@ def registervehicle(request):
             vehicle = form.save(commit=False)
             vehicle.make = form.cleaned_data.get('make')
             vehicle.model = form.cleaned_data.get('model')
+            vehicle.plateNum = form.cleaned_data.get('plateNum')
             vehicle.user = request.user
             vehicle.save()
         return redirect("/userface")

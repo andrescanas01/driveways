@@ -43,3 +43,4 @@ class ParkingSpaceForm(forms.ModelForm):
     class Meta:
         model = ParkingSpot
         fields = ["address", "city"]
+

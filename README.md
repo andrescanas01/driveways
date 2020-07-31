@@ -16,6 +16,7 @@ Driveways
 ## Installing APK
 - APK is stored under "Realeases" on GitHub
 - Install APK on device after server is running 
+- Tested on Pixel 2 device running api 27 (Android 8.1 Oreo)
 
 # Resources
 

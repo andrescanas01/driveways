@@ -1,7 +1,7 @@
 {% extends "userface/adminportal.html" %}
 
 
-
+ <title>My Parking</title>
   {% block active %}
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'userface:portal'%}">
@@ -53,7 +53,7 @@ ul {
 
     {% if vehicle_list %}
     
-    <ul style="width:50rem; margin:20px;">
+    <ul style="margin:10px;">
 <div class="list-group">
 
       {% for vehicle in vehicle_list %}

@@ -25,7 +25,7 @@ SECRET_KEY = '!r#gout21xx&lilnh(uc6i%$^9a@k8r2ryucpd*v)!ru2s1)1+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0', '10.0.2.2']
+#ALLOWED_HOSTS = ['0.0.0.0', '10.0.2.2']
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 

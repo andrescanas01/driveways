@@ -16,12 +16,37 @@
   </head>
 
   <body>
+
     <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
       <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="{% url 'userface:search'%}">Home</a>
       <ul class="navbar-nav px-3">
-        <li class="nav-item text-nowrap">
-          <a class="nav-link" href="#">Sign out</a>
-        </li>
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle"  id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Options</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item"  href="{% url 'userface:myparking'%}">
+                <span data-feather="home"></span>
+                  My Parking
+                </a>
+              <a class="dropdown-item" href="{% url 'userface:my-vehicles'%}">
+                  <span data-feather="truck"></span>
+                  My Vehicles
+                </a>
+
+              <a class="dropdown-item" href="{% url 'userface:myparking'%}">
+                <span data-feather="book-open"></span>
+                  My History
+              </a>
+
+               <a class="dropdown-item" href="{% url 'logout'%}?next=/userface">
+                <span data-feather="log-out"></span>
+                  Logout
+              </a>
+
+            </div>
+
+          </li>
+
       </ul>
     </nav>
 
@@ -58,7 +83,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   <span data-feather="book-open"></span>
-                  My reviews
+                  My history
                 </a>
               </li>
               {% endblock active %}
@@ -99,7 +124,9 @@
     <script>
       feather.replace()
     </script>
-
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/popper.min.js"></script>
+    <script src="https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js"></script>
 
   </body>
 

@@ -1,7 +1,6 @@
 {% extends "userface/search_base.html" %}
 
 
-
 {% if user.is_authenticated %}
 
     {% load crispy_forms_tags %}
@@ -19,6 +18,7 @@
          <input id="distance" class="form-control" type="text" name="distance" value="{{ search_distance }}">
         </div>
         <div style="margin-left: 10px">
+            <br/>
         <button type="submit" class="btn btn-success" >
           Submit
         </button>

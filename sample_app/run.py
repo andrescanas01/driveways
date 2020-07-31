@@ -26,7 +26,7 @@ def main():
 
         ) from exc
 
-    execute_from_command_line(["manage.py", "runserver"])
+    execute_from_command_line(["manage.py", "runserver 0.0.0.0:8000"])
 
 
 

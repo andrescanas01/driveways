@@ -6,12 +6,16 @@ Driveways
 
 ## Installation from PyPI: 
 - pip install driveways-project-cis4930-v6==0.0.8
-- runmyserver
+- runmyserver 0.0.0.0:8000
 
 - ***GDAL libraries must be installed on device
 - $ sudo aptitude install gdal-bin libgdal-dev
 - $ sudo aptitude install python3-gdal
 - $ sudo aptitude install binutils libproj-dev
+
+## Installing APK
+- APK is stored under "Realeases" on GitHub
+- Install APK on device after server is running 
 
 # Resources
 

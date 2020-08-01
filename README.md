@@ -5,7 +5,7 @@ Driveways
 
 
 ## Installation from PyPI: 
-- pip install driveways-project-cis4930-v6==0.0.8
+- pip install driveways==0.1.1
 - runmyserver 
 
 - ***GDAL libraries must be installed on device

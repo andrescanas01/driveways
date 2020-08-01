@@ -65,12 +65,16 @@ body {
  * Navbar
  */
 
+
 .dropdown-menu.show {
     position: absolute;
     background-color: #003366;
     color: #fff;
+    margin:0;
+
 
 }
+
 
 .dropdown-item {
     display: block;
@@ -81,7 +85,7 @@ body {
     color: #fff;
     text-align: inherit;
     white-space: nowrap;
-    background-color: transparent;
+    background-color: #003366;
     border: 0;
 }
 

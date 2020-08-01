@@ -76,6 +76,7 @@ def search(request):
                     request.session['spot'].append(
                         {"address": spot.address,
                          "owner": spot.owner.first_name + " " + spot.owner.last_name,
+                         "image_path": spot.upload_image.url,
                          "lon": spot.location.y,
                          "lat": spot.location.x,
                          "number": number})

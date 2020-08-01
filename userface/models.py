@@ -19,7 +19,7 @@ class ParkingSpot(models.Model):
     location = models.PointField()
     address = models.CharField(max_length=100)
     city = models.CharField(max_length=50)
-
+    upload_image = models.ImageField(upload_to='parkingspot_uploads/', default='parkingspot_uploads/default_image.jpg')
     def __str__(self):
         return self.address
 

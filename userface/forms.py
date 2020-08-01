@@ -43,5 +43,5 @@ class ParkingSpaceForm(forms.ModelForm):
 
     class Meta:
         model = ParkingSpot
-        fields = ["address", "city"]
+        fields = ["address", "city", "upload_image"]
 

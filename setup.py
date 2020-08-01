@@ -14,7 +14,7 @@ setuptools.setup(
     packages=['drive','userface','sample_app',],
     py_modules=["manage"],
     include_package_data = True,
-    install_requires = ['asgiref', 'astroid', 'certifi', 'chardet', 'Django', 'django-crispy-forms', 'django-leaflet', 'geographiclib', 'geopy', 'idna', 'isort', 'lazy-object-proxy==1.4.*', 'mccabe', 'psycopg2-binary', 'pylint', 'pytz', 'requests', 'six', 'sqlparse', 'toml', 'typed-ast', 'urllib3', 'wrapt'],
+    install_requires = ['asgiref', 'astroid', 'certifi', 'chardet', 'Django', 'django-crispy-forms', 'django-leaflet', 'geographiclib', 'geopy', 'idna', 'isort', 'lazy-object-proxy==1.4.*', 'mccabe', 'psycopg2-binary', 'pylint', 'pytz', 'requests', 'six', 'sqlparse', 'toml', 'typed-ast', 'urllib3', 'wrapt','Pillow'],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

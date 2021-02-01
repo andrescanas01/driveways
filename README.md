@@ -1,4 +1,4 @@
-This is Driveways by Andres Canas, Dylan Fay, Henry Parker, Zack Saadioui.
+This is Driveways by Andres Canas, Dylan Fay, and Zack Saadioui.
 
 # Driveways
 Driveways
